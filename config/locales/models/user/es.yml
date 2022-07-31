@@ -1,0 +1,22 @@
+es:
+  activerecord:
+    models:
+      user:
+        one: "Usuario"
+        other: "Usuarios"
+    attributes:
+      user:
+        name: "Nombre"
+        email: "Correo electrónico"
+        password: "Contraseña"
+    errors:
+      models:
+        user:
+          attributes:
+            name:
+              blank: "Este es un campo requerido"
+            email:
+              blank: "Este es un campo requerido"
+              taken: "Ya existe una cuenta con este correo electrónico"
+            password:
+              blank: "Este es un campo requerido"

@@ -1,0 +1,9 @@
+es:
+  helpers:
+    submit:
+      user:
+        create: "Guardar %{model}"
+  users:
+    new:
+      form:
+        error: "Parece que algo salió mal"

@@ -1,52 +1,29 @@
-<%= form_for @user, local: true, data: { turbo: false } do |f| %>
+<%= form_for @user, builder: BulmaFormBuilder, local: true, data: { turbo: false } do |f| %>
 
-  <%- if @user.errors.any? %>
-    <div class="notification is-danger">
-      ¡Parece que algo salió mal!
-    </div>
-  <% end %>
+  <%= f.form_error %>
 
   <div class="field">
     <%= f.label :name, class: "label" %>
     <div class="control">
-      <%= f.text_field :name, class: "input is-rounded" %>
+      <%= f.text_field :name, class: "input" %>
     </div>
-    <%- if @user.errors[:name].any? %>
-      <div class="help is-danger">
-        <%= @user.errors[:name].first %>
-      </div>
-    <% end %>
+    <%= f.field_error :name %>
   </div>
 
   <div class="field">
     <%= f.label :email, class: "label"  %>
     <div class="control">
-      <%= f.text_field :email, class: "input is-rounded" %>
+      <%= f.text_field :email, class: "input is-normal" %>
     </div>
-    <%- if @user.errors[:email].any? %>
-      <div class="help is-danger">
-        <%= @user.errors[:email].first %>
-      </div>
-    <% end %>
+    <%= f.field_error :email %>
   </div>
 
   <div class="field">
     <%= f.label :password, class: "label"  %>
     <div class="control">
-      <%= f.password_field :password, class: "input is-rounded" %>
+      <%= f.password_field :password, class: "input is-normal" %>
     </div>
-    <%- if @user.errors[:password].any? %>
-      <div class="help is-danger">
-        <%= @user.errors[:password].first %>
-      </div>
-    <% end %>
-  </div>
-
-  <div class="field">
-    <%= f.label :password_confirmation, class: "label" %>
-    <div class="control">
-      <%= f.password_field :password_confirmation, class: "input is-rounded" %>
-    </div>
+    <%= f.field_error :password %>
   </div>
 
   <%= f.submit class: "button is-primary"%><br>
