@@ -1,0 +1,14 @@
+<section class="p-6">
+  <h1 class="title"><%= @book.title %><h1>
+  <figure class="image is-128x128">
+    <%= image_tag(url_for(@book.thumbnail)) %>
+  </figure>
+  <div class="content">
+  <br>
+  <hr style="width:20px">
+    <div>
+      <p><%= @book.author %></p>
+      <p><%= @book.description %></p>
+    </div>
+  </div>
+</section>

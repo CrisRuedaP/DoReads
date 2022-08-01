@@ -1,17 +1,19 @@
 # Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
 one:
-  name: MyString
-  description: MyString
-  thumbnail: MyString
-  id: MyString
-  state: false
+  title: MyString
+  isbn: MyString
   author: MyString
+  thumbnail: MyString
+  description: MyText
+  state: false
+  user: one
 
 two:
-  name: MyString
-  description: MyString
-  thumbnail: MyString
-  id: MyString
-  state: false
+  title: MyString
+  isbn: MyString
   author: MyString
+  thumbnail: MyString
+  description: MyText
+  state: false
+  user: two

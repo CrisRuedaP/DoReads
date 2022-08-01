@@ -1,0 +1,29 @@
+es:
+  activerecord:
+    models:
+      book:
+        one: 'Libro'
+    attributes:
+      book:
+        title: 'Nombre'
+        isbn: 'ISBN'
+        author: 'Autor'
+        description: 'Descripción'
+        thumbnail: 'Imagen'
+        state: 'Leído'
+    errors:
+      models:
+        book:
+          attributes:
+            title:
+              blank: 'Es un campo requerido'
+            isbn:
+              blank: 'Es un campo requerido'
+            author:
+              blank: 'Es un campo requerido'
+            description:
+              blank: 'Es un campo requerido'
+            thumbnail:
+              blank: 'Es un campo requerido'
+            state:
+              blank: 'Es un campo requerido'

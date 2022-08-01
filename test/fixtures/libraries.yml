@@ -2,8 +2,10 @@
 
 one:
   book_id: MyString
-  user_id: MyString
+  user: one
+  book: one
 
 two:
   book_id: MyString
-  user_id: MyString
+  user: two
+  book: two
