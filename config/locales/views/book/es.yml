@@ -10,4 +10,4 @@ es:
     create:
       notice: 'Libro añadido correctamente.'
     update:
-      notice: 'El estado del libro fue actualizado.'
+      notice: 'Libro actualizado correctamente.'

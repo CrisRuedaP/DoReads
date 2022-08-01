@@ -1,9 +1,4 @@
 Rails.application.routes.draw do
-  get 'libraries/index'
-  get 'libraries/new'
-  get 'libraries/create'
-  get 'libraries/edit'
-  get 'libraries/update'
   # Defines the root path route ("/")
   root "welcome#index"
   

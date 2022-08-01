@@ -4,6 +4,8 @@ es:
       user:
         create: "Guardar %{model}"
   users:
+    create:
+      notice: "Bienvenido a DoReads"
     new:
       form:
         error: "Parece que algo salió mal"
