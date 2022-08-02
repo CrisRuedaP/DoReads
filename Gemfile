@@ -65,9 +65,8 @@ group :development do
   # Speed up commands on slow machines / big apps [https://github.com/rails/spring]
   # gem "spring"
   gem 'google_sign_in'
-  
+
   gem 'pg'
-  gem 'rails_12factor', group: :production
 end
 
 group :test do
