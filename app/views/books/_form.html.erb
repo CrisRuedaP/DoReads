@@ -1,52 +1,54 @@
-<%= form_for @book, builder: BulmaFormBuilder, local: true, data: { turbo: false } do |f| %>
-  <%= f.form_error %>
+<div class="form-layout">
+  <%= form_for @book, builder: BulmaFormBuilder, local: true, data: { turbo: false } do |f| %>
+    <%= f.form_error %>
 
-    <div class="field">
-      <%= f.label :title, class:"label"%>
-      <div class="control">
-        <%= f.text_field :title, class:"input"%>
+      <div class="field">
+        <%= f.label :title, class:"label"%>
+        <div class="control">
+          <%= f.text_field :title, class:"input"%>
+        </div>
+        <%= f.field_error :title %>
       </div>
-      <%= f.field_error :title %>
-    </div>
 
-    <div class="field">
-      <%= f.label :isbn, class:"label"%>
-      <div class="control">
-        <%= f.text_field :isbn, class:"input"%>
+      <!--<div class="field">
+        <%= f.label :isbn, class:"label"%>
+        <div class="control">
+          <%= f.text_field :isbn, class:"input"%>
+        </div>
+        <%= f.field_error :isbn %>
+      </div> -->
+
+      <div class="field">
+        <%= f.label :author, class:"label"%>
+        <div class="control">
+          <%= f.text_field :author, class:"input"%>
+        </div>
+        <%= f.field_error :author %>
       </div>
-      <%= f.field_error :isbn %>
-    </div>
 
-    <div class="field">
-      <%= f.label :author, class:"label"%>
-      <div class="control">
-        <%= f.text_field :author, class:"input"%>
+      <div class="field">
+        <%= f.label :description, class:"label"%>
+        <div class="control">
+          <%= f.text_field :description, class:"input"%>
+        </div>
+        <%= f.field_error :description %>
       </div>
-      <%= f.field_error :author %>
-    </div>
 
-    <div class="field">
-      <%= f.label :description, class:"label"%>
-      <div class="control">
-        <%= f.text_field :description, class:"input"%>
+      <div class="field">
+        <%= f.label :thumbnail, class:"label"%>
+        <div class="control">
+          <%= f.file_field :thumbnail, class:"input"%>
+        </div>
+        <%= f.field_error :thumbnail %>
       </div>
-      <%= f.field_error :description %>
-    </div>
 
-    <div class="field">
-      <%= f.label :thumbnail, class:"label"%>
-      <div class="control">
-        <%= f.file_field :thumbnail, class:"input"%>
-      </div>
-      <%= f.field_error :thumbnail %>
-    </div>
-
-    <div class="checkbox">
-      <%= f.label :state, class:"label"%>
-      <div class="control">
+      <div class="checkbox">
+        <%= f.label :state, class:"label is-inline"%>
         <%= f.check_box :state, class:"checkbox"%>
       </div>
-    </div>
+      <br>
 
-  <%= f.submit class:"button is-primary"%>
-<% end %>
+    <%= f.submit class:"button btn-color mt-3"%>
+    
+  <% end %>
+</form>

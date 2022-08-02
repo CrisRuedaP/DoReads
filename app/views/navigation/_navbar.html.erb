@@ -1,25 +1,26 @@
-<nav class="navbar is-primary" role="navigation" aria-label="main navigation">
-  <div id="navbarBasicExample" class="navbar-menu">
+<nav class="navbar nav-size" role="navigation" aria-label="main navigation">
+  <div id="navbarBasicExample" class="navbar-menu nav-menu">
     <div class="navbar-start">
-      <%= link_to('Home', root_path, class: 'navbar-item ') %>
+      <%= link_to('Home', root_path, class: 'navbar-item nav-item') %>
     </div>
 
     <div class="navbar-end">
-      <div class="navbar-item">
+      <div class="navbar-item nav-item">
         <div class="buttons">
           <% if user_signed_in? %>
-            <%= link_to('Tu Librería', books_path, class: 'navbar-item') %>
+            <%= link_to('Tu Librería', books_path, class: 'navbar-item nav-item is-hoverable') %>
+            <!--<%= link_to('Tu Librería', libraries_path, class: 'navbar-item nav-item is-hoverable') %>-->
             <div class="navbar-item has-dropdown is-hoverable">
-              <a class="navbar-link">
+              <a class="navbar-link nav-item">
                 <%= current_user.name %>
               </a>
               <div class="navbar-dropdown">
-                <%= link_to('Salir', logout_path, class: 'navbar-item') %>
+                <%= link_to('Salir', logout_path, class: 'navbar-item nav-item is-hoverable') %>
               </div>
             </div>
           <% else %>
-            <%= link_to('Sign up', signup_path, class: 'button is-primary') %>
-            <%= link_to('Log in', login_path, class: 'button is-light') %>
+            <%= link_to('Sign up', signup_path, class: 'button is-black nav-item is-hoverable') %>
+            <%= link_to('Log in', login_path, class: 'button is-light nav-item is-hoverable') %>
           <% end %>
         </div>
       </div>

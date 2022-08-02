@@ -1,1 +1,10 @@
-<h1 class=title">DoReads</h1>
+<section class="is-light layout">
+  <div class="hero-body">
+    <img src="assets/doreads-logo.png" alt="Logo-DoReads" class="img-logo">
+    <p class="subtitle has-text-centered">
+      <% if user_signed_in? %>
+        <%= link_to('Añadir un nuevo libro', new_book_path, class: 'add-link') %>
+      <%end%>
+    </p>
+  </div>
+</section>

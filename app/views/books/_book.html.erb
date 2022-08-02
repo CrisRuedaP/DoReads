@@ -1,18 +1,25 @@
-<div class="card column is-4">
-  <div class="card-image">
+<section class="card column is-3 mg card-size">
+  <div class="card-image p-4">
     <% if book.thumbnail.attached? %>
       <figure class="image is-4by3">
         <%= image_tag(url_for(book.thumbnail)) %>
       </figure>
     <%end%>
-  </div>
 
-  <div class="card-content">
-    <div class="media">
-      <div class="media-content">
-        <p class="title is-4"><%= link_to( book.title, book_path(book))%></p>
-        <p class="subtitle is-6"><%= book.author %> - <%= book.description %></p>
+    <div class="card-content">
+      <div class="media">
+        <div class="media-content">
+          <p class="title name-book is-4"><%= link_to( book.title, book_path(book))%></p>
+          <p class="subtitle is-6"><%= book.author %> - <%= book.description %></p>
+        </div>
       </div>
     </div>
+
+    <div class="controls pt2 center-text ">
+      <% if user_signed_in? %>
+        <%= link_to 'Edit', edit_book_path(book), class:"button is-small is-rounded small-color-btn" %>
+        <%= link_to 'Delete', book, data: { "turbo-method": :delete, notice: "Are you sure? "}, class:"button is-small is-rounded small-color-btn" %>     
+      <% end %>
+    </div>
   </div>
-</div>
+</section>

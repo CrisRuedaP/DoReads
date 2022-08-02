@@ -1,0 +1,94 @@
+@import url('https://fonts.googleapis.com/css2?family=Arima+Madurai:wght@900&family=Mulish&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Nunito&display=swap');
+
+$purple: rgb(162, 89, 255);
+
+* {
+  font-family: 'Mulish', sans-serif;
+  background-color: #FFFFFF;
+}
+
+h1 {
+  font-family: 'Nunito', sans-serif;
+  font-size: 34px;
+}
+
+p {
+  font-size: 1rem;
+  color: #030303;
+}
+
+.layout {
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+  height: 100%;
+  align-items: flex-end;
+  justify-items: center;
+}
+
+.nav-size {
+  height: 100px;
+  padding: 30px;
+  filter: drop-shadow(-4px -22px 19px rgba(0, 0, 0, 0.31));
+}
+
+.nav-item {
+  color: #030303;
+  font-weight: 400;
+  font-size: 1.2rem;
+}
+
+.img-logo {
+  width: 300px;
+}
+
+.add-link {
+  color:#030303;
+  font-size: 1.1rem;
+  text-decoration: underline;
+}
+
+.add-link:hover {
+  color: $purple
+}
+
+.form-layout {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 30px;
+}
+
+.btn-color {
+  background-color: $purple;
+  color: white;
+}
+
+.btn-color:hover {
+  color: white;
+}
+
+.center {
+  margin: 0 auto;
+}
+
+.center-text {
+  text-align: center;
+}
+
+.small-color-btn {
+  border-color: $purple;
+}
+.name-book a {
+  color: #030303;
+}
+
+.mg {
+  margin: 20px;
+}
+
+.card-size {
+  width: 300px !important;
+}

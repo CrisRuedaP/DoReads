@@ -12,7 +12,16 @@ Rails.application.routes.draw do
   #get 'login', to: 'logins#new'
   #get 'login/create', to: 'logins#create', as: :create_login
 
+  #resources :books do
+  #  member do
+  #   put "add", to: "books#library"
+  #    delete :destroy
+  #  end
+  #end
+
   resources :users, only: [:new, :create]
   resources :books
-  resources :libraries, only:[:index]
+  resources :libraries do
+    resources :books
+  end
 end

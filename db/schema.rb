@@ -10,7 +10,10 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2022_08_01_012640) do
+ActiveRecord::Schema[7.0].define(version: 2022_08_01_173652) do
+  # These are extensions that must be enabled in order to support this database
+  enable_extension "plpgsql"
+
   create_table "action_text_rich_texts", force: :cascade do |t|
     t.string "name", null: false
     t.text "body"
@@ -56,27 +59,27 @@ ActiveRecord::Schema[7.0].define(version: 2022_08_01_012640) do
     t.string "thumbnail"
     t.text "description"
     t.boolean "state"
-    t.integer "user_id", null: false
+    t.bigint "user_id", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["user_id"], name: "index_books_on_user_id"
   end
 
   create_table "libraries", force: :cascade do |t|
-    t.integer "user_id", null: false
-    t.integer "book_id", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.index ["book_id"], name: "index_libraries_on_book_id"
-    t.index ["user_id"], name: "index_libraries_on_user_id"
   end
 
-# Could not dump table "users" because of following StandardError
-#   Unknown type '' for column 'password'
+  create_table "users", force: :cascade do |t|
+    t.string "name"
+    t.string "email"
+    t.string "avatar"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.string "password_digest"
+  end
 
   add_foreign_key "active_storage_attachments", "active_storage_blobs", column: "blob_id"
   add_foreign_key "active_storage_variant_records", "active_storage_blobs", column: "blob_id"
   add_foreign_key "books", "users"
-  add_foreign_key "libraries", "books"
-  add_foreign_key "libraries", "users"
 end

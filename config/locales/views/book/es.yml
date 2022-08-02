@@ -8,6 +8,8 @@ es:
       form:
         error: 'Parece que algo salió mal al intentar guardar el %{model}'
     create:
-      notice: 'Libro añadido correctamente.'
+      notice: 'Has añadido el libro correctamente.'
     update:
-      notice: 'Libro actualizado correctamente.'
+      notice: 'Has actualizado el Libro correctamente.'
+    destroy:
+      notice: 'Has eliminado el libro correctamente.'

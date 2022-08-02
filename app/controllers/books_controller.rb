@@ -6,11 +6,11 @@ class BooksController < ApplicationController
     @pagy, @books = pagy(Book.all)
   end
 
-  def show; end
 
   def new
     @book = Book.new
   end
+
 
   def create
     @book = current_user.books.new book_params
@@ -22,8 +22,6 @@ class BooksController < ApplicationController
   end
 
 
-  def edit; end
-
   def update
     @book = Book.find params[:id]
 
@@ -34,10 +32,24 @@ class BooksController < ApplicationController
     render :edit
   end
 
+
+  def destroy
+    @book = Book.find params[:id]
+    @book.destroy
+    redirect_to book_path, notice: t(".notice")
+  end
+
+
+  def show; end
+
+  def edit; end
+
+  
   private
 
   def book_params
-    params.require(:book).permit(:title, :isbn, :author, :thumbnail, :description, :state )
+    params.require(:book).permit(:title, :author, :thumbnail )
+    #params.require(:book).permit(:title, :isbn, :author, :thumbnail, :description, :state ) - Google books api
   end
 
   def set_book

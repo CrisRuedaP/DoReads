@@ -11,12 +11,17 @@
   </head>
 
   <body>
-    <%= render "navigation/navbar" %> 
+    <section>
+    <header>
+      <%= render "navigation/navbar" %>
+    </header>
+    <section>
+      <div class="container">
+        <%= render "common/flash_messages" %> 
+        <%= yield %>
+      </div>
+    </section>
 
-    <div class="container">
-      <%= render "common/flash_messages" %> 
-
-      <%= yield %>
-    </div>
+    </section>
   </body>
 </html>
