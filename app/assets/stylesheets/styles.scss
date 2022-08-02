@@ -38,6 +38,13 @@ p {
   font-size: 1.2rem;
 }
 
+.img-container {
+  height: 70vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 .img-logo {
   width: 300px;
 }
