@@ -4,7 +4,7 @@
 
 ### Installation
 
-You can clone the repo in your terminal and start up a local server at https://localhost:3000/ by running:
+You can clone the repo in your terminal and start up a local server at http://localhost:3000/ by running:
 
 ```
    rails s
