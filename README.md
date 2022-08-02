@@ -1,6 +1,8 @@
+# DoReads
+
 ## 📕 Book Tracker App.
 
-#### Installation
+### Installation
 
 You can clone the repo in your terminal and start up a local server at https://localhost:3000/ by running:
 
