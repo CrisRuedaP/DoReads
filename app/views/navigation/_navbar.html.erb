@@ -1,13 +1,14 @@
 <nav class="navbar nav-size" role="navigation" aria-label="main navigation">
   <div id="navbarBasicExample" class="navbar-menu nav-menu">
     <div class="navbar-start">
-      <%= link_to('Home', root_path, class: 'navbar-item nav-item') %>
+      <%= link_to('Inicio', root_path, class: 'navbar-item nav-item') %>
     </div>
 
     <div class="navbar-end">
       <div class="navbar-item nav-item">
         <div class="buttons">
           <% if user_signed_in? %>
+            <%= link_to "Añadir un libro", new_book_path, class:'navbar-item nav-item is-hoverable'%>
             <%= link_to('Tu Librería', books_path, class: 'navbar-item nav-item is-hoverable') %>
             <!--<%= link_to('Tu Librería', libraries_path, class: 'navbar-item nav-item is-hoverable') %>-->
             <div class="navbar-item has-dropdown is-hoverable">

@@ -6,11 +6,12 @@
       </figure>
     <%end%>
 
-    <div class="card-content">
+    <div class="card-content center-text">
       <div class="media">
         <div class="media-content">
           <p class="title name-book is-4"><%= link_to( book.title, book_path(book))%></p>
-          <p class="subtitle is-6"><%= book.author %> - <%= book.description %></p>
+          <p class="is-6"><%= book.author %></p>
+          <p class="is-6"><%= book.description %></p>
         </div>
       </div>
     </div>

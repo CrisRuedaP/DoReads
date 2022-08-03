@@ -1,13 +1,13 @@
-<section class="p-6 center-text">
-  <h1 class="title"><%= @book.title %><h1>
-  <figure class="image is-128x128 center">
-    <%= image_tag(url_for(@book.thumbnail)) %>
-  </figure>
-  <div class="content center-text">
-  <br>
-    <div>
+<section class="container-card">
+  <div class="book-card center-text">
+    <h1 class="title"><%= @book.title %><h1>
+    <figure class="is-128x128 center">
+      <%= image_tag(url_for(@book.thumbnail)) %>
+    </figure>
+    <div class="center-text">
       <p><%= @book.author %></p>
       <p><%= @book.description %></p>
     </div>
   </div>
 </section>
+<%= link_to('Volver', books_path, class: 'add-link') %>

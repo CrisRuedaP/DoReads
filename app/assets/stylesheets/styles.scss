@@ -5,7 +5,7 @@ $purple: rgb(162, 89, 255);
 
 * {
   font-family: 'Mulish', sans-serif;
-  background-color: #FFFFFF;
+  box-sizing: border-box;
 }
 
 h1 {
@@ -16,6 +16,14 @@ h1 {
 p {
   font-size: 1rem;
   color: #030303;
+}
+
+.pagination-link, 
+.pagination-next, 
+.pagination-previous {
+  background-color: $purple !important;
+  border-color: $purple !important;
+  color: white !important;
 }
 
 .layout {
@@ -34,12 +42,16 @@ p {
 
 .nav-item {
   color: #030303;
-  font-weight: 400;
+  font-weight: 500;
   font-size: 1.2rem;
 }
 
+.nav-item:hover {
+  color:$purple !important;
+  font-weight: 600;
+}
+
 .img-container {
-  height: 70vh;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -52,11 +64,17 @@ p {
 .add-link {
   color:#030303;
   font-size: 1.1rem;
+  font-weight: 400;
   text-decoration: underline;
 }
 
 .add-link:hover {
-  color: $purple
+  color: $purple;
+  font-weight: 600;
+}
+
+.nav-link:hover {
+  color: $purple;
 }
 
 .form-layout {
@@ -88,14 +106,38 @@ p {
 .small-color-btn {
   border-color: $purple;
 }
+
 .name-book a {
   color: #030303;
 }
 
-.mg {
-  margin: 20px;
+.mg { 
+  margin: 20px
 }
 
 .card-size {
   width: 300px !important;
+}
+
+.container-card {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.book-card {
+  max-width: 400px;
+  height: auto;
+  border-radius: var(--border-radius-primary);
+  box-shadow: 24px 24px 80px rgba(0,0,0,0.1);
+  padding: 20px 20px 28px 20px;
+  box-sizing: border-box;
+  margin: 20px;
+  display: flex;
+  flex-direction: column;
+}
+
+.book-card:hover {
+  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
 }

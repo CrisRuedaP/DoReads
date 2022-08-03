@@ -48,7 +48,7 @@ class BooksController < ApplicationController
   private
 
   def book_params
-    params.require(:book).permit(:title, :author, :thumbnail )
+    params.require(:book).permit(:title, :author, :thumbnail, :description, :state  )
     #params.require(:book).permit(:title, :isbn, :author, :thumbnail, :description, :state ) - Google books api
   end
 
