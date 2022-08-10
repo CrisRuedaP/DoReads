@@ -17,7 +17,7 @@ class UsersController < ApplicationController
 
   def show
     @user = User.find(params[:id])
-    @user_books = @user.books
+    @pagy, @user_books = pagy(@user.books)
   end
 
   private
