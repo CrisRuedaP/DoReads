@@ -1,0 +1,7 @@
+<section>
+  <h1 class="title pt-6 is-size-2">¡Hola, <%= @user.name || @user.email %>!</h1>
+  <p class="is-size-5">Has añadido <%= @user_books.count %> libro(s) a tu librería.</p>
+  <div class="columns is-desktop is-multiline pt-6">
+    <%= render @user_books, locals: {user: @user}%>
+  </div>
+</section>

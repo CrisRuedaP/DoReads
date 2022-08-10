@@ -19,8 +19,14 @@ Rails.application.routes.draw do
   #  end
   #end
 
-  resources :users, only: [:new, :create]
+  resources :users
+  resources :users, only: [:new, :create, :show] do
+    resources :books, only: [:index]
+  end
+
+
   resources :books
+  
   resources :libraries do
     resources :books
   end

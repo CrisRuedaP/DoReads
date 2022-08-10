@@ -15,6 +15,11 @@ class UsersController < ApplicationController
     render :new 
   end
 
+  def show
+    @user = User.find(params[:id])
+    @user_books = @user.books
+  end
+
   private
 
   def user_params

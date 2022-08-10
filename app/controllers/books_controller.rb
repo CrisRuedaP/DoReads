@@ -13,9 +13,9 @@ class BooksController < ApplicationController
 
 
   def create
-    @book = current_user.books.new book_params
+    @book = current_user.books.build(book_params)
     if @book.save
-      return redirect_to root_url, notice: t(".notice")
+      return redirect_to current_user, notice: t(".notice")
     end
 
     render :new

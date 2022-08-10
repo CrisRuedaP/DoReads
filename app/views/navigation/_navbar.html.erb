@@ -9,7 +9,7 @@
         <div class="buttons">
           <% if user_signed_in? %>
             <%= link_to "Añadir un libro", new_book_path, class:'navbar-item nav-item is-hoverable'%>
-            <%= link_to('Tu Librería', books_path, class: 'navbar-item nav-item is-hoverable') %>
+            <%= link_to('Tu Librería', current_user, class: 'navbar-item nav-item is-hoverable') %>
             <!--<%= link_to('Tu Librería', libraries_path, class: 'navbar-item nav-item is-hoverable') %>-->
             <div class="navbar-item has-dropdown is-hoverable">
               <a class="navbar-link nav-item">

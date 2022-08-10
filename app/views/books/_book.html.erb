@@ -16,7 +16,7 @@
       </div>
     </div>
 
-    <div class="controls pt2 center-text ">
+    <div class="controls pt2 center-text">
       <% if user_signed_in? %>
         <%= link_to 'Edit', edit_book_path(book), class:"button is-small is-rounded small-color-btn" %>
         <%= link_to 'Delete', book, data: { "turbo-method": :delete, notice: "Are you sure? "}, class:"button is-small is-rounded small-color-btn" %>     
